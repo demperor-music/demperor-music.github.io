@@ -68,7 +68,7 @@
 		left: -100%;
 		animation: sidebar-hide 0s linear;
 	}
-	.topbar .topbartext {
+.topbar .topbartext {
 		padding: 0 10px;
 	}
 
@@ -84,17 +84,21 @@
 @keyframes sidebar-show {
 	0% {
 		left: -100%;
+		top: 0;
 	}
 	100% {
 		left: 0%;
+		top: 0;
 	}
 }
 @keyframes sidebar-hide {
 	0% {
 		left: 0%;
+		top: 0;
 	}
 	100% {
 		left: -100%;
+		top: 0;
 	}
 }
 body {
@@ -214,10 +218,16 @@ p {
 	background-color: #007bff;
 	animation: background-color-change 10s linear infinite alternate;
 	color: #fff;
+	outline: none;
 	border-radius: 5px;
 	text-decoration: none;
 	transition: background-color 0.2 ease;
 }
+
+.btn:hover, .btn:focus {
+	box-shadow: inset 0px 9px 20px rgba(0,0,0,0.3);
+}
+
 .card {
 	background-color: #e1e1e1;
 	padding: 20px;
@@ -281,4 +291,8 @@ p {
 
 b {
 	animation: color-change 10s linear infinite alternate;	
+}
+
+.btn {
+	transition: box-shadow 0.3s ease-in-out;
 }
